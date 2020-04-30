@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.widget.FrameLayout
+import tourguide.tourguide.util.getRealSizeOfDevice
 import tourguide.tourguide.util.letWith
 import tourguide.tourguide.util.locationOnScreen
 
@@ -71,8 +72,8 @@ open class FrameLayoutWithHole @JvmOverloads constructor(private val mActivity: 
         }
 
         val size = Point()
-        size.x = mActivity.resources.displayMetrics.widthPixels
-        size.y = mActivity.resources.displayMetrics.heightPixels
+        size.x = mActivity.getRealSizeOfDevice().x
+        size.y = mActivity.getRealSizeOfDevice().y
 
         mEraserBitmap = Bitmap.createBitmap(size.x, size.y, Bitmap.Config.ARGB_8888)
         _eraserCanvas = Canvas(mEraserBitmap!!)

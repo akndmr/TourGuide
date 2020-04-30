@@ -17,6 +17,7 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.tourguide_tooltip.view.*
 import net.i2p.android.ext.floatingactionbutton.FloatingActionButton
+import tourguide.tourguide.util.getRealSizeOfDevice
 import tourguide.tourguide.util.locationOnScreen
 
 open class TourGuide(private val activity: Activity) {
@@ -41,7 +42,8 @@ open class TourGuide(private val activity: Activity) {
     var overlay: Overlay? = null
 
     private val screenWidth: Int
-        get() = activity.resources?.displayMetrics?.widthPixels ?: 0
+        get() = activity.getRealSizeOfDevice().x
+       // get() = activity.resources?.displayMetrics?.widthPixels ?: 0
 
     /**
      * This describes the animation techniques

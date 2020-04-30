@@ -3,6 +3,25 @@
 # TourGuide
 TourGuide is an Android library. It lets you add pointer, overlay and tooltip easily, guiding users on how to use your app. Refer to the example below(this is a trivial example for demo purpose):
 
+# Setup
+### Step 1. Add the JitPack repository to your build file
+
+Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+    
+### Step 2. Add the dependency
+
+	dependencies {
+	        implementation 'com.github.akndmr:TourGuide:2.0.1'
+	}
+
+
 # Documentation
 Refer to this :point_down:
 
